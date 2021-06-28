@@ -2,12 +2,10 @@ use Mix.Config
 
 # Configure your database
 config :iipmcrud, Iipmcrud.Repo,
-  username: "postgres",
-  password: "87127186ab",
-  database: "iipmcrud",
-  hostname: "localhost",
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+adapter: Ecto.Adapters.Postgres,
+ssl: true,
+url: "postgres://qvedtymqbdubsx:dad85a4457df8856bd3a1ec0f8adf0e45761a30de8dbe6391a89090a13103aaa@ec2-3-214-136-47.compute-1.amazonaws.com:5432/d7c28s5mpad2cs",
+size: 20
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
